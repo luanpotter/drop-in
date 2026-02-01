@@ -133,15 +133,11 @@ git add -A
 git commit -m "release: v$NEW_VERSION"
 git tag -a "v$NEW_VERSION" -m "Release v$NEW_VERSION"
 
-# Local publish
-step "🔐 Publishing (you may be prompted for 2FA)..."
-cd packages/drop-in-css
-npm publish --access public
-cd ../..
-
 step "🚀 Pushing to origin..."
 git push origin "$BRANCH"
 git push origin "v$NEW_VERSION"
 
 newline
-success "✅ Release v$NEW_VERSION published!"
+success "✅ Release v$NEW_VERSION tagged and pushed!"
+info "GitHub Actions will publish to npm via trusted publishing."
+info "Monitor: https://github.com/luanpotter/drop-in/actions"
