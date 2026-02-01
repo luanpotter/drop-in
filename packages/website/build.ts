@@ -3,7 +3,7 @@ import { join } from "path";
 
 const PUBLIC_DIR = "./public";
 const DIST_DIR = "./dist";
-const DROP_IN_DIR = "../drop-in";
+const DROP_IN_DIR = "../drop-in-css";
 
 function copyDir(src: string, dest: string) {
   mkdirSync(dest, { recursive: true });

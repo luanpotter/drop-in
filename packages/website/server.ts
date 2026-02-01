@@ -3,7 +3,7 @@ import { join, extname } from "path";
 
 const PORT = 3000;
 const PUBLIC_DIR = "./public";
-const DROP_IN_CSS = "../drop-in/drop-in.css";
+const DROP_IN_CSS = "../drop-in-css/drop-in.css";
 
 const MIME_TYPES: Record<string, string> = {
   ".html": "text/html",
@@ -42,7 +42,7 @@ Bun.serve({
 
     // Serve assets (fonts, etc.) from the library package
     if (pathname.startsWith("/assets/")) {
-      const assetPath = join("../drop-in", pathname);
+      const assetPath = join("../drop-in-css", pathname);
       if (existsSync(assetPath)) {
         return serveFile(assetPath);
       }
