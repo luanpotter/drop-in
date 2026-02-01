@@ -36,7 +36,7 @@ step() {
     echo "$1"
 }
 
-success "🚀 drop-in Release Script"
+success "🚀 drop-in-css Release Script"
 newline
 
 # Check if logged in
@@ -64,7 +64,7 @@ if [[ "$LOCAL" != "$REMOTE" ]]; then
 fi
 
 # Get current version from package
-CURRENT_VERSION=$(jq -r '.version' packages/drop-in/package.json)
+CURRENT_VERSION=$(jq -r '.version' packages/drop-in-css/package.json)
 warn "Current version: $CURRENT_VERSION"
 
 # Parse version components
@@ -110,7 +110,7 @@ fi
 
 # Update versions
 step "📝 Updating version in package.json files..."
-jq ".version = \"$NEW_VERSION\"" packages/drop-in/package.json > tmp.json && mv tmp.json packages/drop-in/package.json
+jq ".version = \"$NEW_VERSION\"" packages/drop-in-css/package.json > tmp.json && mv tmp.json packages/drop-in-css/package.json
 jq ".version = \"$NEW_VERSION\"" package.json > tmp.json && mv tmp.json package.json
 
 # Build
@@ -123,7 +123,7 @@ step "🔍 Running lint..."
 
 # Dry run publish
 step "📦 Dry run npm publish..."
-cd packages/drop-in
+cd packages/drop-in-css
 npm publish --dry-run
 cd ../..
 
@@ -135,7 +135,7 @@ git tag -a "v$NEW_VERSION" -m "Release v$NEW_VERSION"
 
 # Local publish
 step "🔐 Publishing (you may be prompted for 2FA)..."
-cd packages/drop-in
+cd packages/drop-in-css
 npm publish --access public
 cd ../..
 

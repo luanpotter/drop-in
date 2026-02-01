@@ -1,5 +1,5 @@
 {
-  "name": "drop-in",
+  "name": "drop-in-css",
   "version": "0.1.1",
   "description": "The simplest \"drop-in\" replacement for the browser's default CSS",
   "main": "drop-in.css",

@@ -8,6 +8,6 @@
     "build": "bun run build.ts"
   },
   "dependencies": {
-    "drop-in": "workspace:*"
+    "drop-in-css": "workspace:*"
   }
 }

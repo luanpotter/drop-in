@@ -7,7 +7,7 @@
   ],
   "scripts": {
     "build": "./scripts/build.sh",
-    "build:drop-in": "bun run --filter drop-in build",
+    "build:drop-in-css": "bun run --filter drop-in-css build",
     "build:website": "bun run --filter @drop-in/website build",
     "dev": "bun run --filter @drop-in/website dev",
     "lint": "./scripts/lint.sh",

@@ -37,7 +37,7 @@ if (existsSync(minCssPath)) {
   console.log("✓ Copied minified drop-in.css");
 } else if (existsSync(cssPath)) {
   copyFileSync(cssPath, join(DIST_DIR, "drop-in.css"));
-  console.log("✓ Copied drop-in.css (not minified - run build:drop-in first for minified version)");
+  console.log("✓ Copied drop-in.css (not minified - run build:drop-in-css first for minified version)");
 }
 
 // Copy assets directory if it exists

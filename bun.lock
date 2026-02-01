@@ -2,7 +2,7 @@
   "lockfileVersion": 1,
   "workspaces": {
     "": {
-      "name": "drop-in",
+      "name": "drop-in-monorepo",
       "devDependencies": {
         "@types/bun": "^1.1.0",
         "htmlhint": "^1.1.4",
@@ -13,15 +13,15 @@
         "typescript": "^5.9.3",
       },
     },
-    "packages/drop-in": {
-      "name": "drop-in",
-      "version": "0.1.0",
+    "packages/drop-in-css": {
+      "name": "drop-in-css",
+      "version": "0.1.1",
     },
     "packages/website": {
       "name": "@drop-in/website",
       "version": "0.1.0",
       "dependencies": {
-        "drop-in": "workspace:*",
+        "drop-in-css": "workspace:*",
       },
     },
   },
@@ -114,7 +114,7 @@
 
     "dir-glob": ["dir-glob@3.0.1", "", { "dependencies": { "path-type": "^4.0.0" } }, "sha512-WkrWp9GR4KXfKGYzOLmTuGVi1UWFfws377n9cc55/tb6DuqyF6pcQ5AbiHEshaDpY9v6oaSr2XCDidGmMwdzIA=="],
 
-    "drop-in": ["drop-in@workspace:packages/drop-in"],
+    "drop-in-css": ["drop-in-css@workspace:packages/drop-in-css"],
 
     "emoji-regex": ["emoji-regex@8.0.0", "", {}, "sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A=="],
 
