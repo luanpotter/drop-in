@@ -46,9 +46,29 @@ ul {
 }
 
 code {
+  background: var(--bg);
+  padding: 2px 4px;
+  vertical-align: baseline;
+  position: relative;
+  top: -2px;
+}
+
+code.accent {
+  background-color: var(--accent);
+  color: #000;
+}
+
+pre {
   padding: 8px 16px;
   border: 1px solid var(--border);
   background: var(--bg);
+}
+
+pre code {
+  display: block;
+  padding: 0;
+  border: none;
+  background: none;
 }
 
 section {
@@ -219,14 +239,21 @@ fieldset.error legend {
   width: 100%;
 }
 
-legend .legend-border {
+fieldset.error legend .error {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+fieldset.error legend .error::before {
+  content: "";
   flex: 1;
   height: 1px;
   background: var(--danger);
   margin: 0 8px;
 }
 
-legend .error-text {
+legend .error {
   color: var(--danger);
 }
 
@@ -238,7 +265,7 @@ label {
   color: var(--border);
 }
 
-label .error-text {
+label .error {
   color: var(--danger);
   margin-left: 4px;
 }
