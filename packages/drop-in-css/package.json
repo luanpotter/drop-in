@@ -4,14 +4,22 @@
   "description": "The simplest \"drop-in\" replacement for the browser's default CSS",
   "main": "drop-in.css",
   "style": "drop-in.css",
+  "types": "types.d.ts",
   "exports": {
-    ".": "./drop-in.css",
-    "./min": "./dist/drop-in.min.css"
+    ".": {
+      "types": "./types.d.ts",
+      "default": "./drop-in.css"
+    },
+    "./min": {
+      "types": "./types.d.ts",
+      "default": "./dist/drop-in.min.css"
+    }
   },
   "files": [
     "drop-in.css",
     "assets/",
-    "dist/drop-in.min.css"
+    "dist/drop-in.min.css",
+    "types.d.ts"
   ],
   "scripts": {
     "build": "bun run build.ts"
