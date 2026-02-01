@@ -101,7 +101,6 @@ menu {
   padding: 4px;
   display: flex;
   gap: 4px;
-  margin-bottom: 8px;
 }
 
 menu > a {
@@ -122,6 +121,16 @@ menu > a::after {
 menu > a.active > span {
   text-decoration: underline;
   text-underline-offset: 3px;
+}
+
+menu > a.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+menu > a.disabled:hover > span {
+  color: var(--text);
+  text-decoration: none;
 }
 
 /* Form elements */

@@ -45,6 +45,7 @@ While the main objective is to have as minimal as possible ad-hoc CSS or custom 
 - `.accent` - for buttons and inline code for that extra highlight
 - `.danger` - for buttons (for destructive actions)
 - `.error` - for fieldsets and spans in certain contexts (such as inside labels or legends)
+- `.disabled` - for buttons and menu items
 
 ## Variables
 
