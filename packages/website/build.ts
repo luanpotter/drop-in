@@ -1,10 +1,9 @@
-import { copyFileSync, mkdirSync, readdirSync, readFileSync, writeFileSync, statSync, existsSync } from "fs";
+import { copyFileSync, mkdirSync, readdirSync, statSync, existsSync } from "fs";
 import { join } from "path";
 
 const PUBLIC_DIR = "./public";
 const DIST_DIR = "./dist";
 const DROP_IN_DIR = "../drop-in";
-const BASE_PATH = "/projects/drop-in/";
 
 function copyDir(src: string, dest: string) {
   mkdirSync(dest, { recursive: true });
@@ -15,11 +14,6 @@ function copyDir(src: string, dest: string) {
 
     if (statSync(srcPath).isDirectory()) {
       copyDir(srcPath, destPath);
-    } else if (entry.endsWith(".html")) {
-      // Process HTML files to add base tag
-      let html = readFileSync(srcPath, "utf8");
-      html = html.replace("<head>", `<head>\n    <base href="${BASE_PATH}">`);
-      writeFileSync(destPath, html);
     } else {
       copyFileSync(srcPath, destPath);
     }
