@@ -1,0 +1,22 @@
+{
+  "name": "drop-in-monorepo",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "./scripts/build.sh",
+    "build:drop-in": "bun run --filter drop-in build",
+    "build:website": "bun run --filter @drop-in/website build",
+    "dev": "bun run --filter @drop-in/website dev",
+    "lint": "./scripts/lint.sh",
+    "deploy": "./scripts/deploy.sh",
+    "clean": "rm -rf packages/*/dist"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.1.0",
+    "lightningcss": "^1.28.0",
+    "typescript": "^5.9.3"
+  }
+}

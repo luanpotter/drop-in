@@ -1,0 +1,34 @@
+{
+  "name": "drop-in",
+  "version": "0.1.0",
+  "description": "The simplest \"drop-in\" replacement for the browser's default CSS",
+  "main": "drop-in.css",
+  "style": "drop-in.css",
+  "exports": {
+    ".": "./drop-in.css",
+    "./min": "./dist/drop-in.min.css"
+  },
+  "files": [
+    "drop-in.css",
+    "assets/",
+    "dist/drop-in.min.css"
+  ],
+  "scripts": {
+    "build": "bun run build.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luanpotter/drop-in.git"
+  },
+  "author": "luanpotter",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/luanpotter/drop-in/issues"
+  },
+  "homepage": "https://github.com/luanpotter/drop-in",
+  "keywords": [
+    "css",
+    "style",
+    "drop-in"
+  ]
+}

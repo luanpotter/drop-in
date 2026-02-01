@@ -1,0 +1,13 @@
+{
+  "name": "@drop-in/website",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Homepage and examples for the drop-in package",
+  "scripts": {
+    "dev": "bun run server.ts",
+    "build": "bun run build.ts"
+  },
+  "dependencies": {
+    "drop-in": "workspace:*"
+  }
+}
