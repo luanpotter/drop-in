@@ -11,12 +11,19 @@
     "build:website": "bun run --filter @drop-in/website build",
     "dev": "bun run --filter @drop-in/website dev",
     "lint": "./scripts/lint.sh",
+    "lint:fix": "./scripts/lint.sh --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "deploy": "./scripts/deploy.sh",
     "clean": "rm -rf packages/*/dist"
   },
   "devDependencies": {
     "@types/bun": "^1.1.0",
+    "htmlhint": "^1.1.4",
     "lightningcss": "^1.28.0",
+    "prettier": "^3.4.0",
+    "stylelint": "^16.12.0",
+    "stylelint-config-standard": "^36.0.0",
     "typescript": "^5.9.3"
   }
 }
