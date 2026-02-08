@@ -119,6 +119,7 @@ section {
 
 footer {
   text-align: center;
+  color: var(--border);
   padding: 0.2rem 0;
   font-size: 0.5rem;
 }
