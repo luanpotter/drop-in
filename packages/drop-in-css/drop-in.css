@@ -109,6 +109,12 @@ main {
   margin: 16px;
   box-sizing: border-box;
   min-height: calc(100vh - 32px);
+  display: flex;
+  flex-direction: column;
+}
+
+#root > main {
+  flex: 1;
 }
 
 section {
