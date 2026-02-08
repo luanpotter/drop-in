@@ -38,6 +38,14 @@ body {
   text-align: justify;
 }
 
+h2 {
+  color: var(--accent);
+  font-size: 1rem;
+  font-weight: bold;
+  border-bottom: 1px dotted var(--text);
+  width: 100%;
+}
+
 a {
   color: var(--text);
 }
@@ -64,6 +72,10 @@ code.accent {
   color: #000;
 }
 
+.muted {
+  color: var(--border);
+}
+
 pre {
   padding: 8px 16px;
   border: 1px solid var(--border);
@@ -77,10 +89,13 @@ pre code {
   background: none;
 }
 
-section {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+blockquote {
+  border-left: 1em solid var(--accent);
+  background-color: var(--bg);
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0.2em;
+  padding-left: 0.5em;
 }
 
 /* Layout & Menus */
@@ -94,6 +109,22 @@ main {
   margin: 16px;
   box-sizing: border-box;
   min-height: calc(100vh - 32px);
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+footer {
+  text-align: center;
+  padding: 0.2rem 0;
+  font-size: 0.5rem;
+}
+
+footer * {
+  color: var(--border);
 }
 
 menu {
